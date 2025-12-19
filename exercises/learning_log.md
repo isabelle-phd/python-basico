@@ -1,7 +1,6 @@
-Curso: Python – Aula 4
-Data: 16/12/2025
+# Aula 4 - 16/12/2025
+Conteúdo:comandos básicos
 
-Conteúdo da aula:comandos básicos
 - todos os comandos são funções
 - toda função precisa ter parentesis
 ex: print("olá,mundo")
@@ -31,10 +30,8 @@ input é o mesmo que leia
 Dúvidas:
 - qual é a diferença entre objeto e variável?
 
-Curso: Python – Aula 6
-Data: 17/12/2025 a 19/12/25
-
-Conteúdo da aula: tipos primitivos de saída de dados
+# Aula 6 - 17/12/2025 a 19/12/25
+Conteúdo: tipos primitivos de saída de dados
 
 toda linguagem de programação trabalha basicamente com 4 tipos primitivos / o python tem mais (descbobrir depois)
 
@@ -71,8 +68,7 @@ se você não digita, então False
 dúvidas:
 se todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?
 
-Curso: Python – Aula 7
-Data: 19/12/25
+# Aula 7 - 19/12/25
 Conteúdo: Operadores aritméticos
 
 - operador + faz adição
@@ -135,6 +131,6 @@ print ('{} é muito legal \n e educada'.format(nome))
 f' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.
 ex: print(f'{nome} tem {idade} anos')
 
-Erros para evitar
+# Erros para evitar
 variáveis recebem igual, mas a função print não, é errado escrever print = 
 não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
