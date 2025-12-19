@@ -63,7 +63,6 @@ n = float (input('digite um valor:'))
 print(n)
 [quando der print, vai sair 4.0]
 
-#ex6
 n = bool (input('digite um valor:'))
 print(n) 
 se você digita um valor, ele entende [tem um número dentro], então True
@@ -100,9 +99,9 @@ No caso do python, principalmente para calculos científicos, o limite é o tama
 Como ajustar o alinhamento do input ao imprimir
 
 Ex: print ('Prazer em te conhecer, {:20}!'.format(nome))
-# alinhamento à direita: print ('Prazer em te conhecer, {>:20}!'.format(nome))
-# alinhamento à esquerda: print ('Prazer em te conhecer, {<:20}!'.format(nome))
-# centralizado: print ('Prazer em te conhecer, {^:20}!'.format(nome))
+alinhamento à direita: print ('Prazer em te conhecer, {>:20}!'.format(nome))
+alinhamento à esquerda: print ('Prazer em te conhecer, {<:20}!'.format(nome))
+centralizado: print ('Prazer em te conhecer, {^:20}!'.format(nome))
 
 Observações sobre operações
 
