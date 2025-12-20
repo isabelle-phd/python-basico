@@ -1,6 +1,7 @@
 #faça um programa que leia um número inteiro e mostre na tela o seu sucessor e seu antecessor.
 n=int(input('digite um número'))
 print('o número escolhido é {}, seu antecessor é {} e seu sucessor é {}'.format(n, n-1, n+1))
+#certo
 
 # crie um algoritmo que leia um número e mostre o seu dobro, triplo e a raiz quadrada
 #resposta 1
@@ -28,15 +29,24 @@ print(f'{n*1}\n{n*2}\n {n*3}\n {n*4}\n {n*5}\n {n*6}\n {n*7}\n {n*8}\n {n*9}\n {
 #resposta 2
 n=int(input('escolha um número'))
 print ('{}x1={}'.format(n,n*1))
-print ('{}x1={}'.format(n,n*2))
-print ('{}x1={}'.format(n,n*3))
+print ('{}x2={}'.format(n,n*2))
+print ('{}x3={}'.format(n,n*3))
+
+#correção
+n=int(input('escolha um número'))
+print('_'*12)
+print ('{} x {:2f} = {}'.format(n,1,n*1))
+print('{} x {:2f} = {}'.format(n, 2, n*2))
+print('{} x {:2f} = {}'.format(n, 2, n*2))
+print('_'*12)
 
 # crie um programa que leia quanto dinheiro uma pessoa tem na carteira e mostre quantos dólares ela pode comprar. Considere U$$ 1,00 = R$ 3,27
 d=float(input('Quantos reais você tem?'))
 print('você pode comprar {} dólares'.format(d/3,27))
+#certo
 
 # faça um programa que leia a largura e a altura de uma parede em metros, calcule a sua área e a quantidade de tinta necessária para pintá-la, sabendo que cada litro de tinta pinta uma área de 2m^2.
 l=float(input('largura?'))
 h=float(input('altura?'))
 print('se l é {} e h é {}, a área é {} e a qtd de tinta necessária para pintar é {}'.format(l, h, l*h, l*h/2))
-
+#certo
