@@ -1,7 +1,6 @@
 # Aula 4 - 16/12/2025
 Conteúdo:comandos básicos
 
-Conteúdo da aula:comandos básicos
 - todos os comandos são funções
 - toda função precisa ter parentesis
 ex: print("olá,mundo")
@@ -27,9 +26,6 @@ toda variável é um objeto para o python e pode receber valores
 receber é o mesmo que digitar = 
 
 input é o mesmo que leia
-
-Dúvidas:
-- qual é a diferença entre objeto e variável?
 
 # Aula 6 - 17/12/2025 a 19/12/25
 Conteúdo: tipos primitivos de saída de dados
@@ -67,8 +63,6 @@ print(n)
 se você digita um valor, ele entende [tem um número dentro], então True
 se você não digita, então False
 
-dúvidas:
-se todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?
 
 # Aula 7 - 19/12/25
 Conteúdo: Operadores aritméticos
@@ -133,13 +127,12 @@ print ('{} é muito legal \n e educada'.format(nome))
 f' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.
 ex: print(f'{nome} tem {idade} anos')
 
-#Aula 08 
+# Dúvidas:
+- qual é a diferença entre objeto e variável?
+- todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?
 
-Erros para evitar
+# Erros para evitar
 - variáveis recebem igual, mas a função print não, é errado escrever print = 
 - não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
 - Em Python, números decimais usam ponto (.), não vírgula (,).
 Quando você escreve 1,15, o Python interpreta isso como uma tupla (1, 15), o que causa erro.
-# Erros para evitar
-variáveis recebem igual, mas a função print não, é errado escrever print = 
-não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
