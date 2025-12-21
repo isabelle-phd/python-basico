@@ -136,6 +136,10 @@ print ('{} é muito legal \n e educada'.format(nome))
 f' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.
 ex: print(f'{nome} tem {idade} anos')
 
+#Aula 08 
+
 Erros para evitar
-variáveis recebem igual, mas a função print não, é errado escrever print = 
-não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
+- variáveis recebem igual, mas a função print não, é errado escrever print = 
+- não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
+- Em Python, números decimais usam ponto (.), não vírgula (,).
+Quando você escreve 1,15, o Python interpreta isso como uma tupla (1, 15), o que causa erro.
