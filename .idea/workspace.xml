@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d8c7b55-977f-4137-9178-056a60ec570e" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/exercises/exercício01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício05.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício07.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício08.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício09.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercício12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício23.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/desafios04.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/desafios06.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/desafios07.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/desafios09.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/desafios09.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercício22.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício22.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/learning_log.md" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/learning_log.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +211,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766506456704</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit">
+      <option name="closed" value="true" />
+      <created>1766509583529</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1766509583529</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit">
+      <option name="closed" value="true" />
+      <created>1766509620336</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1766509620336</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

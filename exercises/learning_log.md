@@ -183,10 +183,17 @@ Divisão de string
 - frase.split() --> ele vai quebrando onde tiver espaço entre as palavras / ele vai gerar uma lista com todas as palavras da lista de caracteres
 
 Junção
-- Usar o split e ter todas as palavras em uma lista é útil para fazer junnção
+- Usar o split e ter todas as palavras em uma lista é útil para fazer junção
 - joint(frase) --> junta todos os elementos e pode colocar espaço ou traço onde tinha espaço antes
 
-
+Funções aprendidas
+zfill() é um método de string que preenche a string com zeros à esquerda até atingir o tamanho indicado. É útil para padronizar números digitados com menos dígitos.
+Resumo
+- zfill() → zeros à esquerda
+- rjust() → completa à esquerda com qualquer caractere
+- ljust() → completa à direita com qualquer caractere
+"45".zfill(4)       → "0045"  # zeros à esquerda
+"45".ljust(4, '0')  → "4500"  # zeros à direita
 
 # Dúvidas:
 - qual é a diferença entre objeto e variável?
