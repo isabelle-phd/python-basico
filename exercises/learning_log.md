@@ -127,9 +127,71 @@ print ('{} é muito legal \n e educada'.format(nome))
 f' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.
 ex: print(f'{nome} tem {idade} anos')
 
+# Aula 08 - 21/12
+Conteúdo: Utilizando módulos
+
+- O python trabalha a partir de módulos e pacotes
+- O comando import serve para carregar módulos para os programas
+- Para o python, listas ficam entre []
+- Módulo pygame:
+#faça um programa em python que abra e reproduza o áudio de um arquivo mp3
+#copie a música da área de trabalho e cole no python
+- import pygame
+pygame.init()
+pygame.mixer.music.load('musica.mp3')
+
+# Aula 09 - 23/12
+Conteúdo: Manipulando cadeias de texto
+
+- Fatiar uma string significa pegar "pedaços"
+exs: 
+print('curso de python')
+frase [9]
+output: y
+
+frase [1:6]
+quando se trabalha com intervalo você sempre tem que colocar +1 no final
+por exemplo, curso tem cinco caracteres, então, para conseguir pegar do C até o O, você tem que usar seis caracteres
+
+frase [9:21:2] --> significa que o range é de 9 a 21 e que ele vai pulando de dois em dois
+- Python diferencia maiúsculas e minúsculas
+
+frase [:4] --> antes dos dois pontos, é onde a leitura começa, se você omite significa que ele começa do caracter zero.
+frase [4:] --> significa que você sabe o começo, mas quer que ele vá até o final/não sabe qual é o último caractere
+frase [9::3] --> começa no nove e vai até o fim pulando de três em três
+
+Análise de string
+- len(frase) --> qual é o comprimento da frase?
+- frase.count('o') --> quantas vezes aparece o "o" minúsculo?
+- frase.count('o', 0, 13) --> do caractere zero até o doze quantas x apareceu o "o" minúsculo?
+- frase.find('deo') --> em qual posição começa essa letra ou palavra?
+- frase.find('string que não existe') --> você pediu para encontrar uma string que não existe e o python vai retornar -1
+- 'palavra' in frase --> existe 'palavra' na frase?
+
+Transformação de string
+- Via de regra uma string é imutável
+- frase.replace('palavra1', 'palavra2') --> onde tiver palavra1 ele vai substituir por palavra2
+- frase.upper() --> ele mantém o que é maiúsculo e coloca as demais em maiúsculo
+- frase.lower --> oposto do upper
+- frase.capitalize () --> deixar só a primeira da frase em maiúscula
+- frase.title () --> faz o mesmo que o capitalize, só que com todas as palavras
+- frase.strip () --> remove espaços excessivos no início e no final
+- frase.rstrip () --> remove só os últimos espaços
+- frase.lstrip () --> igual ao anterior, só que começa pela esquerda
+
+Divisão de string
+- frase.split() --> ele vai quebrando onde tiver espaço entre as palavras / ele vai gerar uma lista com todas as palavras da lista de caracteres
+
+Junção
+- Usar o split e ter todas as palavras em uma lista é útil para fazer junnção
+- joint(frase) --> junta todos os elementos e pode colocar espaço ou traço onde tinha espaço antes
+
+
+
 # Dúvidas:
 - qual é a diferença entre objeto e variável?
 - todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?
+- o que é um método? o que é uma função?
 
 # Erros para evitar
 - variáveis recebem igual, mas a função print não, é errado escrever print = 
