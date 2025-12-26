@@ -165,6 +165,7 @@ Análise de string
 - frase.count('o') --> quantas vezes aparece o "o" minúsculo?
 - frase.count('o', 0, 13) --> do caractere zero até o doze quantas x apareceu o "o" minúsculo?
 - frase.find('deo') --> em qual posição começa essa letra ou palavra?
+- frase.rfind('x')--> procura, mas começa pelo final/direita
 - frase.find('string que não existe') --> você pediu para encontrar uma string que não existe e o python vai retornar -1
 - 'palavra' in frase --> existe 'palavra' na frase?
 
@@ -195,11 +196,28 @@ Resumo
 "45".zfill(4)       → "0045"  # zeros à esquerda
 "45".ljust(4, '0')  → "4500"  # zeros à direita
 
+# Revisão
+
+The isidentifier() method returns True if the string is a valid identifier, otherwise False.
+A string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_). A valid identifier cannot start with a number, or contain any spaces.
+
 # Dúvidas:
 - qual é a diferença entre objeto e variável?
 - todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?
 - o que é um método? o que é uma função?
+- qual é a diferença entre métodos e operadores?
+- por que para achar as casas decimais se utiliza essa lógica de operadores?
+ex da dezena:
+“Divida o número por 10 para remover a unidade, depois pegue o resto da divisão por 10 para isolar o último dígito.”
+d = num // 10 % 10
+3824 (um número de 4 dígitos) dividido por 10 sem resto dá 382
+382 // 10 --> depois de formar todas as dezenas possíveis, o que sobra? 2
+e por que não pode ser %100? pensando em dinheiro:
+% 100 é como dizer:
+“Me dê tudo o que sobrou depois de tirar notas de 100” → você recebe R$ 24
 
+// 10 % 10 é como dizer:
+“Tire as moedas de R$1 e depois me diga quantas notas de R$10 sobraram que não completam uma de 100” → você recebe 2 notas de R$10
 # Erros para evitar
 - variáveis recebem igual, mas a função print não, é errado escrever print = 
 - não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
