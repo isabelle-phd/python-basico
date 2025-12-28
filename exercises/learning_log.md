@@ -1,3 +1,86 @@
+# O que é Git
+Git é um sistema de controle de versionamento de arquivos, utilizado para:
+Guardar o histórico de versões de um software
+Registrar quem alterou, quando alterou e o que foi alterado
+Manter controle completo de tudo o que você produz
+Permitir que várias pessoas alterem o mesmo arquivo simultaneamente
+O Git não salva o arquivo inteiro a cada versão. Ele armazena apenas as diferenças (deltas) entre uma versão e outra, mantendo todo o histórico de mudanças.
+
+# O que é GitHub
+GitHub é uma plataforma online onde você hospeda projetos que usam Git.
+Os projetos ficam organizados em repositórios
+Um repositório pode conter vários arquivos
+Ao clicar em um arquivo, é possível visualizar o código
+Pode ser público (open source) ou privado
+Código Open Source
+Qualquer pessoa pode ver o código-fonte
+Outras pessoas podem usar, estudar ou contribuir com o código
+
+# Repositórios e Fork
+Repositório: pasta principal do projeto versionado
+Fork: cópia de um repositório de outra pessoa para a sua conta, permitindo modificações independentes
+
+# Branches (Ramificações)
+Uma branch é uma ramificação do projeto a partir da linha do tempo principal.
+A branch principal é chamada de main ou master
+Nela fica o código considerado estável/final
+Novas funcionalidades ou alterações são feitas em branches separadas
+Exemplo:
+O aplicativo do Instagram que você usa corresponde à branch principal (main).
+O Git não duplica arquivos entre branches — ele apenas registra as mudanças feitas.
+
+# Commits
+Commit é o registro de uma alteração no projeto
+Serve para “dizer ao Git” que você alterou algo e criar uma nova versão no histórico
+
+# Merge
+Merge é o processo de juntar uma branch com a branch principal
+Funciona melhor quando as alterações foram feitas em partes diferentes do código
+Fluxo comum:
+Voltar para a branch principal
+Executar o merge da branch de alterações
+
+# Repositório Remoto
+Remote conecta o repositório local (no seu computador) ao GitHub
+Permite enviar e receber atualizações
+Comandos principais:
+Push: envia as alterações do computador para o GitHub
+Pull: traz as alterações do GitHub para o computador
+
+# README.md
+O arquivo README.md serve para:
+Explicar o projeto
+Fornecer instruções de uso
+Apresentar exercícios, objetivos e estrutura
+Funciona como um “leia-me antes de começar”.
+Você pode ter:
+Um README geral para todo o projeto
+Ou um README específico para cada conjunto de exercícios
+
+# Iniciando um Repositório Local
+Entrar na pasta do projeto
+Abrir o Git Bash
+Executar:
+git init
+A branch principal (main ou master) representa a linha do tempo principal do projeto
+git checkout -b nome_da_branch   # cria e muda para uma nova branch
+git checkout master              # volta para a branch principal
+
+# Área de Staging
+A staging area é onde os arquivos ficam “prontos” para serem commitados
+Comandos:
+git add nome_do_arquivo
+git add .
+
+# Comandos Básicos do Git
+git status        # mostra o estado dos arquivos
+git commit -m ""  # cria um commit com mensagem
+git log           # mostra o histórico de commits
+git diff          # mostra as alterações feitas
+git restore nome_do_arquivo  # desfaz alterações locais
+git checkout master
+git merge nome_da_branch
+
 # Aula 4 - 16/12/2025
 Conteúdo:comandos básicos
 
