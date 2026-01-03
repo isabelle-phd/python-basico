@@ -1,0 +1,479 @@
+Index: exercises/learning_log.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Aula 4 - 16/12/2025\r\nConteúdo:comandos básicos\r\n\r\n- todos os comandos são funções\r\n- toda função precisa ter parentesis\r\nex: print(\"olá,mundo\")\r\n-nem tudo no python é mensagem. se você for fazer uma conta, por exemplo:\r\nprint(7+4) --> o sistema vai executar e responder 11\r\n\r\nmas,se você colocar os números entre aspas, o python vai ler \"me mostre esse número\"\r\n\r\nex: print ('7'+'4')--> 74\r\n\r\ntudo o que estiver entre aspas, é uma mensagem\r\n\r\nno python se escreve em letras minúsculas tudo o que não estiver entre aspas\r\n\r\nvariáveis são espaços na memória onde você pode guardar coisas\r\n\r\ntoda variável é um objeto no python\r\n\r\num objeto é mais do que uma variável\r\n\r\ntoda variável é um objeto para o python e pode receber valores \r\n\r\nreceber é o mesmo que digitar = \r\n\r\ninput é o mesmo que leia\r\n\r\n# Aula 6 - 17/12/2025 a 19/12/25\r\nConteúdo: tipos primitivos de saída de dados\r\n\r\ntoda linguagem de programação trabalha basicamente com 4 tipos primitivos / o python tem mais (descbobrir depois)\r\n\r\nrecomendação sobre simplicidade do código: aspas simples para strings\r\n\r\nquando você pede para o python print dois números que são strings ele vai concatenar, ou seja, colocar um ao lado do outro. por isso, você tem que dizer para o python que eles são números usando int\r\n\r\nos quatro tipos primitivos mais básicos\r\n- int: numeros inteiros\r\n- float: números 'quebrados'/ex: 4.5\r\n- bool: True ou False / sempre que você usar esse tipo você tem que colocar a letra inicial capitalizada\r\n- str: mensagem / ex: \"olá\"\r\n\r\nOutras formas de usar print\r\n\r\n1) print(\"a soma vale\", s)\r\n2) print(\"a soma vale{}\".format(s))\r\n\r\no tipo primitivo tem que ser especificado desde o início\r\n\r\ntecla de atalho para executar uma seleção de linhas alt+shift+e\r\n\r\nComo converter um número antes de dar print para o formato que você quer\r\nn = float (input('digite um valor:'))\r\n[suponhamos que foi digitado um int, como 4]\r\nprint(n)\r\n[quando der print, vai sair 4.0]\r\n\r\n#ex6\r\nn = bool (input('digite um valor:'))\r\nprint(n) \r\nse você digita um valor, ele entende [tem um número dentro], então True\r\nse você não digita, então False\r\n\r\n\r\n# Aula 7 - 19/12/25\r\nConteúdo: Operadores aritméticos\r\n\r\n- operador + faz adição\r\n- operador - faz subtração\r\n- operador * faz multiplicação\r\n- operador ** faz potência\r\nobs1: outra forma de fazer potência é pow (base, expoente). Cuidado: ao usar essa função interna, a ordem de precedência é perdida\r\nex: pow (4,3) = 4 elevado a 3 = 64\r\nobs2: dá para fazer raiz na forma de potência. \r\nex: raiz quadrada de 9 --> 9**1/2 = 3 \r\n- operador / faz divisão\r\n- operador // faz divisão inteira\r\n- operador % faz resto da divisão\r\n\r\nOrdem de precedência\r\n\r\n1) ()\r\n2) potências (**)\r\n3) *, /, //, % (se todos aparecerem, resolve quem vier primeiro)\r\n4) +, - \r\n\r\nNo caso do python, principalmente para calculos científicos, o limite é o tamanho da memória\r\n\r\nComo ajustar o alinhamento do input ao imprimir\r\n\r\nEx: print ('Prazer em te conhecer, {:20}!'.format(nome))\r\nalinhamento à direita: print ('Prazer em te conhecer, {>:20}!'.format(nome))\r\nalinhamento à esquerda: print ('Prazer em te conhecer, {<:20}!'.format(nome))\r\ncentralizado: print ('Prazer em te conhecer, {^:20}!'.format(nome))\r\n\r\nObservações sobre operações\r\n\r\nA criação de uma variável soma é útil se você for armazenar o valor e usar a variável depois.\r\nEm outros casos, você pode simplesmente partir para a operação.\r\nn1 = int (input ('um valor:'))\r\nn2 = int (input ('outro valor:'))\r\nprint('a soma vale {}'.format(n1+n2))\r\n\r\nComo não quebrar a linha de um print para outro\r\n\r\nex:\r\nnormal\r\nprint('nome')\r\nprint(número)\r\n\r\npara não quebrar a linha\r\nprint ('nome', end = '  ')\r\nprint(número)\r\nobs: você pode colocar praticamente qualquer coisa entre as aspas do end.\r\nex: poderia ser end =' >>>> '\r\n\r\nComo quebrar a linha no meio do print\r\n\r\nbasta usar \\n\r\n\r\nex:\r\nnome = str(input('digite um nome'))\r\nprint ('{} é muito legal \\n e educada'.format(nome))\r\n\r\nf' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.\r\nex: print(f'{nome} tem {idade} anos')\r\n\r\n# Aula 08 - 21/12\r\nConteúdo: Utilizando módulos\r\n\r\n- O python trabalha a partir de módulos e pacotes\r\n- O comando import serve para carregar módulos para os programas\r\n- Para o python, listas ficam entre []\r\n- Módulo pygame:\r\n#faça um programa em python que abra e reproduza o áudio de um arquivo mp3\r\n#copie a música da área de trabalho e cole no python\r\n- import pygame\r\npygame.init()\r\npygame.mixer.music.load('musica.mp3')\r\n\r\n# Aula 09 - 23/12\r\nConteúdo: Manipulando cadeias de texto\r\n\r\n- Fatiar uma string significa pegar \"pedaços\"\r\nexs: \r\nprint('curso de python')\r\nfrase [9]\r\noutput: y\r\n\r\nfrase [1:6]\r\nquando se trabalha com intervalo você sempre tem que colocar +1 no final\r\npor exemplo, curso tem cinco caracteres, então, para conseguir pegar do C até o O, você tem que usar seis caracteres\r\n\r\nfrase [9:21:2] --> significa que o range é de 9 a 21 e que ele vai pulando de dois em dois\r\n- Python diferencia maiúsculas e minúsculas\r\n\r\nfrase [:4] --> antes dos dois pontos, é onde a leitura começa, se você omite significa que ele começa do caracter zero.\r\nfrase [4:] --> significa que você sabe o começo, mas quer que ele vá até o final/não sabe qual é o último caractere\r\nfrase [9::3] --> começa no nove e vai até o fim pulando de três em três\r\n\r\nAnálise de string\r\n- len(frase) --> qual é o comprimento da frase?\r\n- frase.count('o') --> quantas vezes aparece o \"o\" minúsculo?\r\n- frase.count('o', 0, 13) --> do caractere zero até o doze quantas x apareceu o \"o\" minúsculo?\r\n- frase.find('deo') --> em qual posição começa essa letra ou palavra?\r\n- frase.rfind('x')--> procura, mas começa pelo final/direita\r\n- frase.find('string que não existe') --> você pediu para encontrar uma string que não existe e o python vai retornar -1\r\n- 'palavra' in frase --> existe 'palavra' na frase?\r\n\r\nTransformação de string\r\n- Via de regra uma string é imutável\r\n- frase.replace('palavra1', 'palavra2') --> onde tiver palavra1 ele vai substituir por palavra2\r\n- frase.upper() --> ele mantém o que é maiúsculo e coloca as demais em maiúsculo\r\n- frase.lower --> oposto do upper\r\n- frase.capitalize () --> deixar só a primeira da frase em maiúscula\r\n- frase.title () --> faz o mesmo que o capitalize, só que com todas as palavras\r\n- frase.strip () --> remove espaços excessivos no início e no final\r\n- frase.rstrip () --> remove só os últimos espaços\r\n- frase.lstrip () --> igual ao anterior, só que começa pela esquerda\r\n\r\nDivisão de string\r\n- frase.split() --> ele vai quebrando onde tiver espaço entre as palavras / ele vai gerar uma lista com todas as palavras da lista de caracteres\r\n\r\nJunção\r\n- Usar o split e ter todas as palavras em uma lista é útil para fazer junção\r\n- joint(frase) --> junta todos os elementos e pode colocar espaço ou traço onde tinha espaço antes\r\n\r\nFunções aprendidas\r\nzfill() é um método de string que preenche a string com zeros à esquerda até atingir o tamanho indicado. É útil para padronizar números digitados com menos dígitos.\r\nResumo\r\n- zfill() → zeros à esquerda\r\n- rjust() → completa à esquerda com qualquer caractere\r\n- ljust() → completa à direita com qualquer caractere\r\n\"45\".zfill(4)       → \"0045\"  # zeros à esquerda\r\n\"45\".ljust(4, '0')  → \"4500\"  # zeros à direita\r\n\r\n# Revisão\r\n\r\nThe isidentifier() method returns True if the string is a valid identifier, otherwise False.\r\nA string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_). A valid identifier cannot start with a number, or contain any spaces.\r\n\r\n# Dúvidas:\r\n- qual é a diferença entre objeto e variável?\r\n- todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?\r\n- o que é um método? o que é uma função?\r\n- qual é a diferença entre métodos e operadores?\r\n- por que para achar as casas decimais se utiliza essa lógica de operadores?\r\nex da dezena:\r\n“Divida o número por 10 para remover a unidade, depois pegue o resto da divisão por 10 para isolar o último dígito.”\r\nd = num // 10 % 10\r\n3824 (um número de 4 dígitos) dividido por 10 sem resto dá 382\r\n382 // 10 --> depois de formar todas as dezenas possíveis, o que sobra? 2\r\ne por que não pode ser %100? pensando em dinheiro:\r\n% 100 é como dizer:\r\n“Me dê tudo o que sobrou depois de tirar notas de 100” → você recebe R$ 24\r\n\r\n// 10 % 10 é como dizer:\r\n“Tire as moedas de R$1 e depois me diga quantas notas de R$10 sobraram que não completam uma de 100” → você recebe 2 notas de R$10\r\n# Erros para evitar\r\n- variáveis recebem igual, mas a função print não, é errado escrever print = \r\n- não pode usar o \\n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes\r\n- Em Python, números decimais usam ponto (.), não vírgula (,).\r\nQuando você escreve 1,15, o Python interpreta isso como uma tupla (1, 15), o que causa erro.\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/learning_log.md b/exercises/learning_log.md
+--- a/exercises/learning_log.md	(revision 39900a10ffb476d914cab43574db79939173aa45)
++++ b/exercises/learning_log.md	(date 1767407090647)
+@@ -1,8 +1,8 @@
+-# Aula 4 - 16/12/2025
++# Aula 4 
+ Conteúdo:comandos básicos
+ 
+ - todos os comandos são funções
+-- toda função precisa ter parentesis
++- toda função precisa ter parenteses
+ ex: print("olá,mundo")
+ -nem tudo no python é mensagem. se você for fazer uma conta, por exemplo:
+ print(7+4) --> o sistema vai executar e responder 11
+@@ -27,7 +27,7 @@
+ 
+ input é o mesmo que leia
+ 
+-# Aula 6 - 17/12/2025 a 19/12/25
++# Aula 6 
+ Conteúdo: tipos primitivos de saída de dados
+ 
+ toda linguagem de programação trabalha basicamente com 4 tipos primitivos / o python tem mais (descbobrir depois)
+@@ -64,7 +64,7 @@
+ se você não digita, então False
+ 
+ 
+-# Aula 7 - 19/12/25
++# Aula 7 
+ Conteúdo: Operadores aritméticos
+ 
+ - operador + faz adição
+@@ -127,7 +127,7 @@
+ f' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.
+ ex: print(f'{nome} tem {idade} anos')
+ 
+-# Aula 08 - 21/12
++# Aula 08 
+ Conteúdo: Utilizando módulos
+ 
+ - O python trabalha a partir de módulos e pacotes
+@@ -140,7 +140,7 @@
+ pygame.init()
+ pygame.mixer.music.load('musica.mp3')
+ 
+-# Aula 09 - 23/12
++# Aula 09 
+ Conteúdo: Manipulando cadeias de texto
+ 
+ - Fatiar uma string significa pegar "pedaços"
+@@ -196,11 +196,56 @@
+ "45".zfill(4)       → "0045"  # zeros à esquerda
+ "45".ljust(4, '0')  → "4500"  # zeros à direita
+ 
+-# Revisão
++#Aula 10.1
++Conteúdo: Condições
++
++- Dentro de um mesmo programa você pode ter vários caminhos para um mesmo resultado, como em uma rota com várias estradas que levam ao mesmo lugar.
++- estrutura de um programa se A, senão B 
++- representação estruturada ou indentada
++- ex:
++carro.siga()
++if carro.esquerda():
++#bloco True
++    carro.siga()
++    carro.direita()
++else:
++#bloco False
++    carro.siga()
++    carro.esquerda()
++
++Os dois blocos nunca serão executados ao mesmo tempo em uma condicional
++
++É possível fazer várias condicionais
++
++# Revisão 12/2025
+ 
+ The isidentifier() method returns True if the string is a valid identifier, otherwise False.
+ A string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_). A valid identifier cannot start with a number, or contain any spaces.
+ 
++Tarefa difícil explicada: 
++#crie um programa que leia o nome completo de uma pessoa e mostre:= quantas letras tem o primeiro nome
++separa = nome.split()
++separa é o nome da lista
++nome é uma string com o nome completo, por exemplo: "Maria Silva Souza".
++.split() quebra a string em partes, usando o espaço como separador.
++O resultado é uma lista ["Maria", "Silva", "Souza"]
++Essa lista foi guardada na variável separa
++separa[0]
++Em Python, listas começam no índice 0.
++separa[0] pega o primeiro elemento da lista, ou seja, o primeiro nome.
++len(separa[0])
++len() conta quantos caracteres existem em uma string.
++Como separa[0] é "Maria", o resultado é 5.
++print('seu primeiro nome é {} e tem {} letras'.format(separa[0], len(separa[0])))
++{} são espaços reservados para valores.
++.format(...) substitui:
++o primeiro {} por separa[0] → "Maria"
++o segundo {} por len(separa[0]) → 5
++
++# Revisão 01/26
++random.randint(a, b): Gera um número inteiro aleatório inclusive os limites a e b.
++
++
+ # Dúvidas:
+ - qual é a diferença entre objeto e variável?
+ - todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?
+@@ -218,8 +263,13 @@
+ 
+ // 10 % 10 é como dizer:
+ “Tire as moedas de R$1 e depois me diga quantas notas de R$10 sobraram que não completam uma de 100” → você recebe 2 notas de R$10
++- o que é o operador ternário que não existe no python e para quê ele serve? 
++
+ # Erros para evitar
+ - variáveis recebem igual, mas a função print não, é errado escrever print = 
+ - não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
+ - Em Python, números decimais usam ponto (.), não vírgula (,).
+ Quando você escreve 1,15, o Python interpreta isso como uma tupla (1, 15), o que causa erro.
++- Na hora de escrever ' ' para formatação de strings, é preciso prestar atenção se você colocou um espaço entre elas. No python, visualmente pode parecer que tem o espaço, mas não tem e isso causa erro no código.
++ex: print('o primeiro nome tem {} letras'.format(nome.find(' '))) --> assim funciona
++    print('o primeiro nome tem {} letras'.format(nome.find(''))) --> assim não funciona
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]/shelved.patch	(revision 39900a10ffb476d914cab43574db79939173aa45)
++++ /dev/null	(revision 39900a10ffb476d914cab43574db79939173aa45)
+@@ -1,25 +0,0 @@
+-Index: exercises/learning_log.md
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+># Aula 4 - 16/12/2025\r\nConteúdo:comandos básicos\r\n\r\nConteúdo da aula:comandos básicos\r\n- todos os comandos são funções\r\n- toda função precisa ter parentesis\r\nex: print(\"olá,mundo\")\r\n-nem tudo no python é mensagem. se você for fazer uma conta, por exemplo:\r\nprint(7+4) --> o sistema vai executar e responder 11\r\n\r\nmas,se você colocar os números entre aspas, o python vai ler \"me mostre esse número\"\r\n\r\nex: print ('7'+'4')--> 74\r\n\r\ntudo o que estiver entre aspas, é uma mensagem\r\n\r\nno python se escreve em letras minúsculas tudo o que não estiver entre aspas\r\n\r\nvariáveis são espaços na memória onde você pode guardar coisas\r\n\r\ntoda variável é um objeto no python\r\n\r\num objeto é mais do que uma variável\r\n\r\ntoda variável é um objeto para o python e pode receber valores \r\n\r\nreceber é o mesmo que digitar = \r\n\r\ninput é o mesmo que leia\r\n\r\nDúvidas:\r\n- qual é a diferença entre objeto e variável?\r\n\r\n# Aula 6 - 17/12/2025 a 19/12/25\r\nConteúdo: tipos primitivos de saída de dados\r\n\r\ntoda linguagem de programação trabalha basicamente com 4 tipos primitivos / o python tem mais (descbobrir depois)\r\n\r\nrecomendação sobre simplicidade do código: aspas simples para strings\r\n\r\nquando você pede para o python print dois números que são strings ele vai concatenar, ou seja, colocar um ao lado do outro. por isso, você tem que dizer para o python que eles são números usando int\r\n\r\nos quatro tipos primitivos mais básicos\r\n- int: numeros inteiros\r\n- float: números 'quebrados'/ex: 4.5\r\n- bool: True ou False / sempre que você usar esse tipo você tem que colocar a letra inicial capitalizada\r\n- str: mensagem / ex: \"olá\"\r\n\r\nOutras formas de usar print\r\n\r\n1) print(\"a soma vale\", s)\r\n2) print(\"a soma vale{}\".format(s))\r\n\r\no tipo primitivo tem que ser especificado desde o início\r\n\r\ntecla de atalho para executar uma seleção de linhas alt+shift+e\r\n\r\nComo converter um número antes de dar print para o formato que você quer\r\nn = float (input('digite um valor:'))\r\n[suponhamos que foi digitado um int, como 4]\r\nprint(n)\r\n[quando der print, vai sair 4.0]\r\n\r\n#ex6\r\nn = bool (input('digite um valor:'))\r\nprint(n) \r\nse você digita um valor, ele entende [tem um número dentro], então True\r\nse você não digita, então False\r\n\r\ndúvidas:\r\nse todo objeto tem atributos e métodos, quais são os tipos de cada um desses que um objeto pode ter?\r\n\r\n# Aula 7 - 19/12/25\r\nConteúdo: Operadores aritméticos\r\n\r\n- operador + faz adição\r\n- operador - faz subtração\r\n- operador * faz multiplicação\r\n- operador ** faz potência\r\nobs1: outra forma de fazer potência é pow (base, expoente). Cuidado: ao usar essa função interna, a ordem de precedência é perdida\r\nex: pow (4,3) = 4 elevado a 3 = 64\r\nobs2: dá para fazer raiz na forma de potência. \r\nex: raiz quadrada de 9 --> 9**1/2 = 3 \r\n- operador / faz divisão\r\n- operador // faz divisão inteira\r\n- operador % faz resto da divisão\r\n\r\nOrdem de precedência\r\n\r\n1) ()\r\n2) potências (**)\r\n3) *, /, //, % (se todos aparecerem, resolve quem vier primeiro)\r\n4) +, - \r\n\r\nNo caso do python, principalmente para calculos científicos, o limite é o tamanho da memória\r\n\r\nComo ajustar o alinhamento do input ao imprimir\r\n\r\nEx: print ('Prazer em te conhecer, {:20}!'.format(nome))\r\nalinhamento à direita: print ('Prazer em te conhecer, {>:20}!'.format(nome))\r\nalinhamento à esquerda: print ('Prazer em te conhecer, {<:20}!'.format(nome))\r\ncentralizado: print ('Prazer em te conhecer, {^:20}!'.format(nome))\r\n\r\nObservações sobre operações\r\n\r\nA criação de uma variável soma é útil se você for armazenar o valor e usar a variável depois.\r\nEm outros casos, você pode simplesmente partir para a operação.\r\nn1 = int (input ('um valor:'))\r\nn2 = int (input ('outro valor:'))\r\nprint('a soma vale {}'.format(n1+n2))\r\n\r\nComo não quebrar a linha de um print para outro\r\n\r\nex:\r\nnormal\r\nprint('nome')\r\nprint(número)\r\n\r\npara não quebrar a linha\r\nprint ('nome', end = '  ')\r\nprint(número)\r\nobs: você pode colocar praticamente qualquer coisa entre as aspas do end.\r\nex: poderia ser end =' >>>> '\r\n\r\nComo quebrar a linha no meio do print\r\n\r\nbasta usar \\n\r\n\r\nex:\r\nnome = str(input('digite um nome'))\r\nprint ('{} é muito legal \\n e educada'.format(nome))\r\n\r\nf' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.\r\nex: print(f'{nome} tem {idade} anos')\r\n\r\n#Aula 08 \r\n\r\nErros para evitar\r\n- variáveis recebem igual, mas a função print não, é errado escrever print = \r\n- não pode usar o \\n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes\r\n- Em Python, números decimais usam ponto (.), não vírgula (,).\r\nQuando você escreve 1,15, o Python interpreta isso como uma tupla (1, 15), o que causa erro.\r\n# Erros para evitar\r\nvariáveis recebem igual, mas a função print não, é errado escrever print = \r\nnão pode usar o \\n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/exercises/learning_log.md b/exercises/learning_log.md
+---- a/exercises/learning_log.md	(revision 93cafbc9a15d4c757e4a0cc807cc252157e87073)
+-+++ b/exercises/learning_log.md	(date 1766311227253)
+-@@ -133,7 +133,11 @@
+- f' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.
+- ex: print(f'{nome} tem {idade} anos')
+- 
+--#Aula 08 
+-+#Aula 08 - 21/12
+-+Conteúdo: Utilizando módulos
+-+
+-+- O python trabalha a partir de módulos e pacotes
+-+
+- 
+- Erros para evitar
+- - variáveis recebem igual, mas a função print não, é errado escrever print = 
+-diff --git a/exercises/aula08.py b/exercises/aula08.py
+-new file mode 100644
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01__Changes_.xml	(revision 39900a10ffb476d914cab43574db79939173aa45)
++++ /dev/null	(revision 39900a10ffb476d914cab43574db79939173aa45)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]" date="1766311366638" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 21/12/2025 07:01 [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: exercises/exercício34.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício34.py b/exercises/exercício34.py
+new file mode 100644
+--- /dev/null	(date 1767406649882)
++++ b/exercises/exercício34.py	(date 1767406649882)
+@@ -0,0 +1,9 @@
++#escreva um programa que pergunte o salário do usuário e calcule o aumento
++#para salários maiores que 1250 reais, a=10%
++#para inferiores ou iguais, a=15%
++
++s = float(input('digite o salário'))
++if s >= 1250:
++    print('o salário reajustado será {}'.format(s*1,1))
++else:
++    print('o salário reajustado será {}'.format(s*1,15))
+Index: exercises/exercício35.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício35.py b/exercises/exercício35.py
+new file mode 100644
+--- /dev/null	(date 1767406649898)
++++ b/exercises/exercício35.py	(date 1767406649898)
+@@ -0,0 +1,3 @@
++#crie um programa que leia o comprimento de três retas e diga ao usuário se elas podem ou não formar um triângulo
++
++#mesmo caso do 33, não consigo passar da etapa do input
+\ No newline at end of file
+Index: exercises/revisão2026_01.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/revisão2026_01.py b/exercises/revisão2026_01.py
+new file mode 100644
+--- /dev/null	(date 1767406813389)
++++ b/exercises/revisão2026_01.py	(date 1767406813389)
+@@ -0,0 +1,1 @@
++#faça um programa que leia três números e mostre qual é o maior e qual é o menor
+Index: exercises/aula10.1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/aula10.1.py b/exercises/aula10.1.py
+new file mode 100644
+--- /dev/null	(date 1767404314775)
++++ b/exercises/aula10.1.py	(date 1767404314775)
+@@ -0,0 +1,31 @@
++#ex01
++tempo = int(input('Quantos anos tem seu carro?'))
++if tempo <= 3:
++    print('carro novo')
++else:
++    print('carro velho')
++print('--FIM--')
++
++#como fazer o ex01 de um jeito mais fácil: condição simplificada
++tempo = int(input('Quantos anos tem seu carro?'))
++print('carro novo' if tempo <= 3 else 'carro velho')
++print('--FIM--')
++
++#ex02
++
++nome = str(input('qual é seu nome?'))
++if nome == 'Gustavo':
++    print('que nome lindo você tem!')
++else:
++    print('que nome normal')
++print('bom dia, {}'.format(nome))
++
++#ex03
++n1 = float(input('digite a primeira nota'))
++n2 = float(input('digite a segunda nota'))
++m = (n1 + n2)/2
++print('a média foi {}'.format(m))
++if m <= 6.0:
++    print('reprovado')
++else:
++    print('aprovado')
+Index: exercises/exercício28.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício28.py b/exercises/exercício28.py
+new file mode 100644
+--- /dev/null	(date 1767405685141)
++++ b/exercises/exercício28.py	(date 1767405685141)
+@@ -0,0 +1,13 @@
++#escreva um programa que faça o pc pensar um número inteiro de 0 a 5
++#peça para o usuário tentar advinhar
++#o programa deverá dizer se o usuário acertou ou não
++
++import random
++número = random.randint(0,5)
++nus=int(input('tente advinhar o número que o pc escolheu'))
++if número == nus:
++    print('você acertou')
++else:
++    print('você errou, o número selecionado era {}'.format(número))
++
++
+Index: exercises/exercício29.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício29.py b/exercises/exercício29.py
+new file mode 100644
+--- /dev/null	(date 1767405746480)
++++ b/exercises/exercício29.py	(date 1767405746480)
+@@ -0,0 +1,10 @@
++#escreva um programa que leia a velocidade de um carro
++#se ele ultrapasssar 80km/h, escreva uma mensagem de aviso de multa
++#a multa vai custar 7 reais por km acima do limite, avise o total para o usuário
++
++v = float(input('qual é a velocidade do carro?'))
++if v <= 80:
++    print ('você está dentro do limite de velocidade')
++else:
++    ve = v - 80
++    print('você excedeu a velocidade em {} km/h e a multa será de {} reais'.format(ve, ve*7))
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0d8c7b55-977f-4137-9178-056a60ec570e\" name=\"Changes\" comment=\"commit\">\r\n      <change afterPath=\"$PROJECT_DIR$/exercises/exercício26.py\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/revisão2025_12.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/exercises/exercício22.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/exercises/exercício22.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/exercises/exercício23.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/exercises/exercício23.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/exercises/exercício24.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/exercises/exercício24.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/exercises/exercício25.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/exercises/exercício25.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/exercises/learning_log.md\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/exercises/learning_log.md\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Pull.Settings\">\r\n    <option name=\"OPTIONS\">\r\n      <set>\r\n        <option value=\"REBASE\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;isabelle-phd&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/isabelle-phd/python-basico.git&quot;,\r\n    &quot;accountId&quot;: &quot;05bbff4d-cfed-4c9c-b012-540bf1a89ed1&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"374hNDDTRveGQDq419dmZTuhZ20\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;Python.aula06.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"aula06\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"python-basico\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/exercises\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/exercises/aula06.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0d8c7b55-977f-4137-9178-056a60ec570e\" name=\"Changes\" comment=\"\" />\r\n      <created>1766168208741</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1766168208741</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Adiciona exercícios das aulas 06 e 07\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766187322108</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766187322109</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Adiciona exercícios das aulas 06 e 07\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766272334856</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766272334856</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766276897182</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766276897182</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766277441711</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766277441711</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766506456704</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766506456704</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766509583529</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766509583529</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766509620336</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766509620336</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1766512382221</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1766512382222</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"9\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Adiciona exercícios das aulas 06 e 07\" />\r\n    <MESSAGE value=\"commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"commit\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 39900a10ffb476d914cab43574db79939173aa45)
++++ b/.idea/workspace.xml	(date 1767406956807)
+@@ -5,14 +5,21 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="0d8c7b55-977f-4137-9178-056a60ec570e" name="Changes" comment="commit">
+-      <change afterPath="$PROJECT_DIR$/exercises/exercício26.py" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/revisão2025_12.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/aula10.1.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício28.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício29.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício30.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício31.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício32.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício33.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício34.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/exercício35.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/exercises/revisão2026_01.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/exercises/exercício22.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício22.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/exercises/exercício23.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício23.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/exercises/exercício24.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício24.py" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/exercises/exercício25.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício25.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/exercises/learning_log.md" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/learning_log.md" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/revisão2025_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/revisão2025_12.py" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -170,7 +177,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1766512382222</updated>
+     </task>
+-    <option name="localTasksCounter" value="9" />
++    <task id="LOCAL-00009" summary="commit">
++      <option name="closed" value="true" />
++      <created>1766710923082</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1766710923082</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+Index: exercises/exercício30.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício30.py b/exercises/exercício30.py
+new file mode 100644
+--- /dev/null	(date 1767406112578)
++++ b/exercises/exercício30.py	(date 1767406112578)
+@@ -0,0 +1,7 @@
++#crie um programa que leia um número inteiro e mostre na tela se é par ou ímpar
++
++n = int(input('escolha um número'))
++if n % 2 == 0:
++    print('{} é par'.format(n))
++else:
++    print('{} é ímpar'.format(n))
+Index: exercises/exercício31.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício31.py b/exercises/exercício31.py
+new file mode 100644
+--- /dev/null	(date 1767406112590)
++++ b/exercises/exercício31.py	(date 1767406112590)
+@@ -0,0 +1,10 @@
++#crie um programa que pergunte a distância de uma viagem em km
++#calcule o preço da passagem, cobrando 0,5 reais por km até 200km
++#e 0,45/km para viagens mais longas
++
++d = float(input('qual é a distância da viagem em km?'))
++if d<= 200:
++    print('o valor da passagem é {} reais'.format(d*0,5))
++else:
++    print('o valor da passagem é {}'.format(d*0,45))
++
+Index: exercises/exercício32.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício32.py b/exercises/exercício32.py
+new file mode 100644
+--- /dev/null	(date 1767406395078)
++++ b/exercises/exercício32.py	(date 1767406395078)
+@@ -0,0 +1,7 @@
++#faça um programa que leia um ano e mostre se ele é bissexto
++a = int(input('escolha um ano'))
++if a % 4 == 0:
++    print('{} é bissexto'.format(a))
++else:
++    print('{} não é bissexto'.format(a))
++
+Index: revisão2025_12.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#crie um script python que leia o dia, o mês e o ano de nascimento de uma pessoa e mostre uma mensagem com a data formatada. (Faça todas as soluções possíveis)\r\n\r\n#s1\r\nd = int(input('que dia você nasceu?'))\r\nm = int(input('em que mês você nasceu?'))\r\na = int(input('em que ano você nasceu?'))\r\n#print 1\r\nprint('você nasceu em {} de {} de {}'.format(d, m, a))\r\n#print 2\r\nprint('você nasceu em', d, 'de', m, 'de', a)\r\n\r\n#s2\r\na= str(input('quando você nasceu? digite no formato dd/mm/aaaa'))\r\nprint('você nasceu no dia {}.'.format(a[0:2]))\r\nprint('você nasceu no mês {}.'.format(a[3:5]))\r\nprint('você nasceu no ano {}.'.format(a[6:10]))\r\n\r\n#crie um programa que leia dois números e mostre a soma entre eles\r\nn1=int(input('digite um número: '))\r\nn2=int(input('digite outro número:'))\r\nprint('a soma entre {} e {} é {}'.format(n1,n2,n1+n2))\r\n\r\n#faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as possíveis informações possíveis sobre ele.\r\nrandom = input('digite algo')\r\nprint(type(random))\r\nprint(random.isnumeric())\r\nprint(random.isupper())\r\nprint(random.isalpha())\r\nprint(random.isalnum())\r\n\r\n#faça um programa que leia um número inteiro qualquer e mostre na tela a sua tabuada\r\nn = int(input('escolha um número'))\r\nprint('0 x {} = {}'.format(n,n*0))\r\nprint('1 x {} = {}'.format(n,n*1))\r\nprint('2 x {} = {}'.format(n,n*2))\r\n\r\n#crie um programa que leia um número real qualquer pelo teclado e mostre na tela a sua porção inteira\r\nn = float(input('escolha um número'))\r\nprint('o número escolhido é {} e sua porção inteira é {}'.format(n, int(n)))\r\n\r\n#faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo\r\n\r\n\r\n#faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa\r\n\r\n#um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido.\r\n\r\n#o mesmo professor quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.\r\n\r\n#crie um programa que leia o nome completo de uma pessoa e mostre:\r\n#1- o nome com todas as letras maiúsculas\r\n#2 - o nome todas as minúsculas\r\n#3 - quantas letras no total (sem considerar espaços)\r\n#4 - quantas letras tem o primeiro nome\r\n\r\n#crie um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados\r\n\r\n#crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome \"SANTO\"\r\n\r\n#crie um programa que leia o nome de uma pessoa e diga se ela tem \"SILVA\" no nome.\r\nn = str(input('digite seu nome completo')).strip().lower()\r\nprint('Esse nome tem Silva?'.format(n.find('silva')))\r\n\r\n# faça um programa que leia uma frase e mostre:\r\n# 1) quantas vezes aparece a letra \"a\"?\r\n# 2) em que posição ela aparece pela primeira vez?\r\n# 3) em que posição ela aparece pela última vez?\r\n\r\nfrase = input('digite uma frase').upper().strip()\r\nprint('a letra \"a\" aparece {} vezes'.format(frase.count('a')))\r\nprint('a letra \"a\" aparece pela primeira vez na posição {}'.format(frase.find(a)+1))\r\nprint('a letra \"a\" aparece pela última vez na posição {}'.format(frase.rfind(a)+1))\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/revisão2025_12.py b/revisão2025_12.py
+--- a/revisão2025_12.py	(revision 39900a10ffb476d914cab43574db79939173aa45)
++++ b/revisão2025_12.py	(date 1767402329475)
+@@ -39,7 +39,9 @@
+ print('o número escolhido é {} e sua porção inteira é {}'.format(n, int(n)))
+ 
+ #faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo
+-
++import math
++a=math.radians(float(input('digite um ângulo:')))
++print(' o ângulo é {}, o sen é {}, o cos é {}, a tg é {}'.format(a, math.sin(a), math.cos(a), math.tan(a)))
+ 
+ #faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa
+ 
+@@ -52,9 +54,21 @@
+ #2 - o nome todas as minúsculas
+ #3 - quantas letras no total (sem considerar espaços)
+ #4 - quantas letras tem o primeiro nome
++nome=str(input('digite um nome'))
++print('seu nome em letras maiúsculas é {}'.format(nome.upper()))
++print('seu nome em letras minúsculas é {}'.format(nome.lower()))
++print('há {} letras no total'.format(len(nome)-nome.count(' ')))
++print('o primeiro nome tem {} letras'.format(nome.find(' ')))
++
++#4 (com explicação escrita para ajudar a não esquecer)
++#a primeira etapa é separar todas as partes do nome formando uma lista
++lista = nome.split()
++#depois, cada elemento vai corresponder a uma posição, ex: [0] será o primeiro nome. Assim:
++print('o primeiro nome é {} e tem {} letras'.format(lista[0], len(lista[0])))
+ 
+ #crie um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados
+ 
++
+ #crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "SANTO"
+ 
+ #crie um programa que leia o nome de uma pessoa e diga se ela tem "SILVA" no nome.
+Index: exercises/exercício33.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/exercises/exercício33.py b/exercises/exercício33.py
+new file mode 100644
+--- /dev/null	(date 1767407167522)
++++ b/exercises/exercício33.py	(date 1767407167522)
+@@ -0,0 +1,15 @@
++#faça um programa que leia três números e mostre qual é o maior e qual é o menor
++
++n1= float(input('escolha um número'))
++n2= float(input('escolha outro número'))
++n3= float(input('escolha mais um número'))
++#não consegui fazer a lógica com apenas duas condicionais
++
++#tentativa com dica
++if n1 <= n2 and n1 <= n3:
++    print('o menor valor é {}'.format(n1))
++if n2 <= n1 and n2 <= n3:
++    print('o menor valor é {}'.format(n2))
++if n3 <= n1 and n3 <= n1:
++    print('o menor valor é {}'.format(n3))
++
