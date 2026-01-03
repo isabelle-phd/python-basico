@@ -81,11 +81,11 @@ git restore nome_do_arquivo  # desfaz alterações locais
 git checkout master
 git merge nome_da_branch
 
-# Aula 4 - 16/12/2025
+# Aula 4 
 Conteúdo:comandos básicos
 
 - todos os comandos são funções
-- toda função precisa ter parentesis
+- toda função precisa ter parenteses
 ex: print("olá,mundo")
 -nem tudo no python é mensagem. se você for fazer uma conta, por exemplo:
 print(7+4) --> o sistema vai executar e responder 11
@@ -110,7 +110,7 @@ receber é o mesmo que digitar =
 
 input é o mesmo que leia
 
-# Aula 6 - 17/12/2025 a 19/12/25
+# Aula 6 
 Conteúdo: tipos primitivos de saída de dados
 
 toda linguagem de programação trabalha basicamente com 4 tipos primitivos / o python tem mais (descbobrir depois)
@@ -147,7 +147,7 @@ se você digita um valor, ele entende [tem um número dentro], então True
 se você não digita, então False
 
 
-# Aula 7 - 19/12/25
+# Aula 7 
 Conteúdo: Operadores aritméticos
 
 - operador + faz adição
@@ -210,7 +210,7 @@ print ('{} é muito legal \n e educada'.format(nome))
 f' no começo indica que a string é uma f-string (formatted string). Ela permite colocar variáveis e contas direto dentro do texto, usando { }.
 ex: print(f'{nome} tem {idade} anos')
 
-# Aula 08 - 21/12
+# Aula 08 
 Conteúdo: Utilizando módulos
 
 - O python trabalha a partir de módulos e pacotes
@@ -223,7 +223,7 @@ Conteúdo: Utilizando módulos
 pygame.init()
 pygame.mixer.music.load('musica.mp3')
 
-# Aula 09 - 23/12
+# Aula 09 
 Conteúdo: Manipulando cadeias de texto
 
 - Fatiar uma string significa pegar "pedaços"
@@ -279,10 +279,55 @@ Resumo
 "45".zfill(4)       → "0045"  # zeros à esquerda
 "45".ljust(4, '0')  → "4500"  # zeros à direita
 
-# Revisão
+#Aula 10.1
+Conteúdo: Condições
+
+- Dentro de um mesmo programa você pode ter vários caminhos para um mesmo resultado, como em uma rota com várias estradas que levam ao mesmo lugar.
+- estrutura de um programa se A, senão B 
+- representação estruturada ou indentada
+- ex:
+carro.siga()
+if carro.esquerda():
+#bloco True
+    carro.siga()
+    carro.direita()
+else:
+#bloco False
+    carro.siga()
+    carro.esquerda()
+
+Os dois blocos nunca serão executados ao mesmo tempo em uma condicional
+
+É possível fazer várias condicionais
+
+# Revisão 12/2025
 
 The isidentifier() method returns True if the string is a valid identifier, otherwise False.
 A string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_). A valid identifier cannot start with a number, or contain any spaces.
+
+Tarefa difícil explicada: 
+#crie um programa que leia o nome completo de uma pessoa e mostre:= quantas letras tem o primeiro nome
+separa = nome.split()
+separa é o nome da lista
+nome é uma string com o nome completo, por exemplo: "Maria Silva Souza".
+.split() quebra a string em partes, usando o espaço como separador.
+O resultado é uma lista ["Maria", "Silva", "Souza"]
+Essa lista foi guardada na variável separa
+separa[0]
+Em Python, listas começam no índice 0.
+separa[0] pega o primeiro elemento da lista, ou seja, o primeiro nome.
+len(separa[0])
+len() conta quantos caracteres existem em uma string.
+Como separa[0] é "Maria", o resultado é 5.
+print('seu primeiro nome é {} e tem {} letras'.format(separa[0], len(separa[0])))
+{} são espaços reservados para valores.
+.format(...) substitui:
+o primeiro {} por separa[0] → "Maria"
+o segundo {} por len(separa[0]) → 5
+
+# Revisão 01/26
+random.randint(a, b): Gera um número inteiro aleatório inclusive os limites a e b.
+
 
 # Dúvidas:
 - qual é a diferença entre objeto e variável?
@@ -301,8 +346,13 @@ e por que não pode ser %100? pensando em dinheiro:
 
 // 10 % 10 é como dizer:
 “Tire as moedas de R$1 e depois me diga quantas notas de R$10 sobraram que não completam uma de 100” → você recebe 2 notas de R$10
+- o que é o operador ternário que não existe no python e para quê ele serve? 
+
 # Erros para evitar
 - variáveis recebem igual, mas a função print não, é errado escrever print = 
 - não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
 - Em Python, números decimais usam ponto (.), não vírgula (,).
 Quando você escreve 1,15, o Python interpreta isso como uma tupla (1, 15), o que causa erro.
+- Na hora de escrever ' ' para formatação de strings, é preciso prestar atenção se você colocou um espaço entre elas. No python, visualmente pode parecer que tem o espaço, mas não tem e isso causa erro no código.
+ex: print('o primeiro nome tem {} letras'.format(nome.find(' '))) --> assim funciona
+    print('o primeiro nome tem {} letras'.format(nome.find(''))) --> assim não funciona

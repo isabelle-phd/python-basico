@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d8c7b55-977f-4137-9178-056a60ec570e" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/exercises/exercício26.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/revisão2025_12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/aula10.1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício28.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício29.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício30.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício31.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício32.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício33.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício34.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/exercício35.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercises/revisão2026_01.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_12_2025_07_01__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercício22.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício22.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercício23.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício23.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercício24.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício24.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercício25.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercício25.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/learning_log.md" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/learning_log.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revisão2025_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/revisão2025_12.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766512382222</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="commit">
+      <option name="closed" value="true" />
+      <created>1766710923082</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1766710923082</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -39,7 +39,9 @@ n = float(input('escolha um número'))
 print('o número escolhido é {} e sua porção inteira é {}'.format(n, int(n)))
 
 #faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo
-
+import math
+a=math.radians(float(input('digite um ângulo:')))
+print(' o ângulo é {}, o sen é {}, o cos é {}, a tg é {}'.format(a, math.sin(a), math.cos(a), math.tan(a)))
 
 #faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa
 
@@ -52,8 +54,20 @@ print('o número escolhido é {} e sua porção inteira é {}'.format(n, int(n))
 #2 - o nome todas as minúsculas
 #3 - quantas letras no total (sem considerar espaços)
 #4 - quantas letras tem o primeiro nome
+nome=str(input('digite um nome'))
+print('seu nome em letras maiúsculas é {}'.format(nome.upper()))
+print('seu nome em letras minúsculas é {}'.format(nome.lower()))
+print('há {} letras no total'.format(len(nome)-nome.count(' ')))
+print('o primeiro nome tem {} letras'.format(nome.find(' ')))
+
+#4 (com explicação escrita para ajudar a não esquecer)
+#a primeira etapa é separar todas as partes do nome formando uma lista
+lista = nome.split()
+#depois, cada elemento vai corresponder a uma posição, ex: [0] será o primeiro nome. Assim:
+print('o primeiro nome é {} e tem {} letras'.format(lista[0], len(lista[0])))
 
 #crie um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados
+
 
 #crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "SANTO"
 
