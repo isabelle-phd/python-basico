@@ -279,7 +279,7 @@ Resumo
 "45".zfill(4)       → "0045"  # zeros à esquerda
 "45".ljust(4, '0')  → "4500"  # zeros à direita
 
-#Aula 10.1
+# Aula 10.1
 Conteúdo: Condições
 
 - Dentro de um mesmo programa você pode ter vários caminhos para um mesmo resultado, como em uma rota com várias estradas que levam ao mesmo lugar.
@@ -299,6 +299,51 @@ else:
 Os dois blocos nunca serão executados ao mesmo tempo em uma condicional
 
 É possível fazer várias condicionais
+
+É possível fazer o programa esperar para executar, por ex:
+você pode dar um print como se o computador estivesse pensando e depois dar comando:
+sleep (3) #significa que ele vai demorar 3s antes da próxima tarefa
+mas para isso você precisa importar sleep do pacote time
+
+# Aula 11
+Conteúdo: cores no terminal
+
+código ansi \033[ m 
+preencher com coisas entre o colchetes e o m
+pode colocar em qualquer ordem, mas normalmente é: style, text e background
+
+- os códigos para estilo são 0 (none), 1(bold), 4 (underline) e 7 (negative)
+- os códigos para texto vão de 30 a 37
+obs: para mais cores precisa de biblioteca, preto, por ex
+- os códigos de background vão de 40 a 47
+
+#testando cores
+
+#escrever teste em branco com fundo vermelho
+\033[0:30:41m
+#0 significa que não tem formatação (ex: negrito, itálico)
+
+#escrever teste em amarelo com fundo azul e sublinhado
+\033[4:33:44m
+
+#escrever teste em roxo com fundo amarelo e negrito
+\033[1:35:43m
+
+#escrever teste em cinza, fundo preto e negrito
+#fundo preto e letra cinza é o padrão do terminal
+\033[m
+
+#escrever teste em preto e fundo branco
+\033[7:30m
+#usar o inversor
+
+# Aula 12
+Conteúdo: condições aninhadas - "condições dentro de condições"
+elif é como senão + se: é usado quando você tem mais de uma opção (ex: três estradas em vez de só duas)
+sempre vai ter um if em condicionais, elif e else são opcionais
+e se houver mais possibilidades? if +elif*n +else
+pode usar quantas elifs quiser
+else só pode ser usado nenhuma ou uma vez
 
 # Revisão 12/2025
 
@@ -351,8 +396,8 @@ e por que não pode ser %100? pensando em dinheiro:
 # Erros para evitar
 - variáveis recebem igual, mas a função print não, é errado escrever print = 
 - não pode usar o \n no meio de uma lista de operações, porque não é string. Nesse caso, tem que ter uma formatted string e as contas entre colchetes
-- Em Python, números decimais usam ponto (.), não vírgula (,).
-Quando você escreve 1,15, o Python interpreta isso como uma tupla (1, 15), o que causa erro.
+- Em Python, números decimais usam ponto (.), não vírgula (,). Ex: 0.45 em vez de 0,45 (esse erro tem sido recorrente)
+Quando você escreve 1,15, o Python interpreta isso como uma dupla (1, 15), o que causa erro.
 - Na hora de escrever ' ' para formatação de strings, é preciso prestar atenção se você colocou um espaço entre elas. No python, visualmente pode parecer que tem o espaço, mas não tem e isso causa erro no código.
 ex: print('o primeiro nome tem {} letras'.format(nome.find(' '))) --> assim funciona
     print('o primeiro nome tem {} letras'.format(nome.find(''))) --> assim não funciona
