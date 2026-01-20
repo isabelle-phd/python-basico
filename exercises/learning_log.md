@@ -279,7 +279,7 @@ Resumo
 "45".zfill(4)       → "0045"  # zeros à esquerda
 "45".ljust(4, '0')  → "4500"  # zeros à direita
 
-# Aula 10.1
+# Aula 10
 Conteúdo: Condições
 
 - Dentro de um mesmo programa você pode ter vários caminhos para um mesmo resultado, como em uma rota com várias estradas que levam ao mesmo lugar.
